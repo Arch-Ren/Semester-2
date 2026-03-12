@@ -1,4 +1,4 @@
-package Semester2;
+package Semester2.AkunBank;
 
 public class Akun {
     private String username;    //minimal 4 huruf

@@ -1,4 +1,5 @@
-package Semester2;
+package Semester2.AkunBank;
+
 import java.util.Scanner;
 
 public class MainAkun {
