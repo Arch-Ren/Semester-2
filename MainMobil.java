@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class MainMobil {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
-        //instan objek bernama m1
+
+        // instan objek bernama m1
         Mobil m1 = new Mobil();
 
         m1.setKecepatan(input.nextInt());
@@ -17,7 +17,7 @@ public class MainMobil {
 
         System.out.println("================");
 
-        //instan objek baru bernama m2
+        // instan objek baru bernama m2
         Mobil m2 = new Mobil();
 
         m2.setKecepatan(input.nextInt());
@@ -30,11 +30,11 @@ public class MainMobil {
 
         System.out.println("================");
 
-        //merubah warna dari objek m1
+        // merubah warna dari objek m1
         System.out.println("mobil pada objek m1 di rubah menjadi warna hijau");
         m1.setWarna("Hijau");
-        
-        //menampilkan hasil perubahan
+
+        // menampilkan hasil perubahan
         m1.displayMessage();
     }
 }

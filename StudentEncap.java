@@ -1,7 +1,7 @@
 public class StudentEncap {
     private String name;
     private int mark;
-    private void setName(String n){
+    public void setName(String n){
         name=n;
     }
     public String getName(){

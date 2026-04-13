@@ -7,12 +7,12 @@ public class LabKomdas {
     double hargaFinal;
 
     public double hargaAkhir(int kodeBarang, int jumlahBeli) {
-        if( jumlahBeli > 100) {
-            switch(kodeBarang) {
+        if (jumlahBeli > 100) {
+            switch (kodeBarang) {
                 case 1:
                     hargaFinal = jacketA - 5000;
                     return hargaFinal;
-                
+
                 case 2:
                     hargaFinal = jacketB - 5000;
                     return hargaFinal;
@@ -22,10 +22,10 @@ public class LabKomdas {
                     return hargaFinal;
             }
         } else {
-            switch(kodeBarang) {
+            switch (kodeBarang) {
                 case 1:
                     return jacketA;
-                
+
                 case 2:
                     return jacketB;
 

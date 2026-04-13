@@ -1,5 +1,6 @@
-public class Lingkaran{
+public class Lingkaran {
     int alas, tinggi;
+
     public Lingkaran(int alas) {
         this.alas = alas;
     }
@@ -17,25 +18,29 @@ public class Lingkaran{
     public static int parsing(String a) {
         return Integer.parseInt(a);
     }
-    
-    public void setAlas(int alas){
+
+    public void setAlas(int alas) {
         this.alas = alas;
     }
-    public void setTinggi(int tinggi){
+
+    public void setTinggi(int tinggi) {
         this.tinggi = tinggi;
     }
-        public int getAlas(){
+
+    public int getAlas() {
         return alas;
     }
-        public int getTinggi(){
+
+    public int getTinggi() {
         return tinggi;
     }
-        public double hitungLuas(){
-        double hasil = (double)(getTinggi()*getAlas())/2;
+
+    public double hitungLuas() {
+        double hasil = (double) (getTinggi() * getAlas()) / 2;
         return hasil;
     }
 
-    public void displayMessage(){
-        System.out.println("Hitung Luas : "+hitungLuas());
+    public void displayMessage() {
+        System.out.println("Hitung Luas : " + hitungLuas());
     }
 }
