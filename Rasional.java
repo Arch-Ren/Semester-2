@@ -1,174 +1,88 @@
-<<<<<<< HEAD
-public class Rasional{
+public class Rasional {
     private int pembilang, penyebut;
-    public Rasional(){
-        pembilang=0;
-        penyebut=0;
-    }
-    public Rasional(int pbl, int pyb){
-        pembilang=pbl;
-        penyebut=pyb;
+
+    public Rasional() {
+        pembilang = 0;
+        penyebut = 0;
     }
 
-    //mengecek suatu bilangan adalah rasional atau bukan
-    public boolean isRasional(){
-        return (penyebut!= 0);
+    public Rasional(int pbl, int pyb) {
+        pembilang = pbl;
+        penyebut = pyb;
     }
 
-    //menyederhanakan bilangan rasional
-    public void Sederhana(){
+    // mengecek suatu bilangan adalah rasional atau bukan
+    public boolean isRasional() {
+        return (penyebut != 0);
+    }
+
+    // menyederhanakan bilangan rasional
+    public void Sederhana() {
         int temp, A, B;
-        if (penyebut ==0){
+        if (penyebut == 0) {
             return;
         }
-        A = (pembilang<penyebut) ? penyebut:pembilang;
-        B = (pembilang<penyebut) ? pembilang:penyebut;
+        A = (pembilang < penyebut) ? penyebut : pembilang;
+        B = (pembilang < penyebut) ? pembilang : penyebut;
 
-        for (; B != 0; ){
-            temp= A % B;
+        for (; B != 0;) {
+            temp = A % B;
             A = B;
             B = temp;
         }
-        pembilang /=A;
-        penyebut /=A;
+        pembilang /= A;
+        penyebut /= A;
     }
 
-    public double Cast(){
-        return (penyebut==0.0) ? 0.0 : (double)pembilang / (double)penyebut;
+    public double Cast() {
+        return (penyebut == 0.0) ? 0.0 : (double) pembilang / (double) penyebut;
     }
-    
-    //oprator >
-    public boolean moreThan (Rasional A){
+
+    // oprator >
+    public boolean moreThan(Rasional A) {
         return (pembilang * A.penyebut > penyebut * A.pembilang);
     }
 
-    public boolean lessThan (Rasional A) {
+    public boolean lessThan(Rasional A) {
         return (pembilang * A.penyebut < penyebut * A.pembilang);
     }
 
-    public boolean lessThanOrEqual (Rasional A) {
+    public boolean lessThanOrEqual(Rasional A) {
         return (pembilang * A.penyebut <= penyebut * A.pembilang);
     }
 
-    public boolean moreThanOrEqual (Rasional A) {
+    public boolean moreThanOrEqual(Rasional A) {
         return (pembilang * A.penyebut >= penyebut * A.pembilang);
     }
 
-    //operator Unary- ---> A = -A
-    public void negasi(){
-        pembilang = - pembilang;
+    // operator Unary- ---> A = -A
+    public void negasi() {
+        pembilang = -pembilang;
     }
 
-    //operator unary += \
-    public void unaryPlus(Rasional A){
+    // operator unary += \
+    public void unaryPlus(Rasional A) {
         pembilang = pembilang * A.penyebut + penyebut * A.pembilang;
         penyebut *= A.penyebut;
     }
 
-    public void kurangi (Rasional A) {
+    public void kurangi(Rasional A) {
         pembilang = pembilang * A.penyebut - penyebut * A.pembilang;
         penyebut *= A.penyebut;
     }
 
-    public void kali (Rasional A) {
+    public void kali(Rasional A) {
         pembilang *= A.pembilang;
         penyebut *= A.penyebut;
     }
 
-    public void bagi (Rasional A) {
+    public void bagi(Rasional A) {
         pembilang *= A.penyebut;
         penyebut *= A.pembilang;
         Sederhana();
     }
- 
-    public void cetak(){
+
+    public void cetak() {
         System.out.println(pembilang + "/" + penyebut);
     }
-=======
-public class Rasional{
-    private int pembilang, penyebut;
-    public Rasional(){
-        pembilang=0;
-        penyebut=0;
-    }
-    public Rasional(int pbl, int pyb){
-        pembilang=pbl;
-        penyebut=pyb;
-    }
-
-    //mengecek suatu bilangan adalah rasional atau bukan
-    public boolean isRasional(){
-        return (penyebut!= 0);
-    }
-
-    //menyederhanakan bilangan rasional
-    public void Sederhana(){
-        int temp, A, B;
-        if (penyebut ==0){
-            return;
-        }
-        A = (pembilang<penyebut) ? penyebut:pembilang;
-        B = (pembilang<penyebut) ? pembilang:penyebut;
-
-        for (; B != 0; ){
-            temp= A % B;
-            A = B;
-            B = temp;
-        }
-        pembilang /=A;
-        penyebut /=A;
-    }
-
-    public double Cast(){
-        return (penyebut==0.0) ? 0.0 : (double)pembilang / (double)penyebut;
-    }
-    
-    //oprator >
-    public boolean moreThan (Rasional A){
-        return (pembilang * A.penyebut > penyebut * A.pembilang);
-    }
-
-    public boolean lessThan (Rasional A) {
-        return (pembilang * A.penyebut < penyebut * A.pembilang);
-    }
-
-    public boolean lessThanOrEqual (Rasional A) {
-        return (pembilang * A.penyebut <= penyebut * A.pembilang);
-    }
-
-    public boolean moreThanOrEqual (Rasional A) {
-        return (pembilang * A.penyebut >= penyebut * A.pembilang);
-    }
-
-    //operator Unary- ---> A = -A
-    public void negasi(){
-        pembilang = - pembilang;
-    }
-
-    //operator unary += \
-    public void unaryPlus(Rasional A){
-        pembilang = pembilang * A.penyebut + penyebut * A.pembilang;
-        penyebut *= A.penyebut;
-    }
-
-    public void kurangi (Rasional A) {
-        pembilang = pembilang * A.penyebut - penyebut * A.pembilang;
-        penyebut *= A.penyebut;
-    }
-
-    public void kali (Rasional A) {
-        pembilang *= A.pembilang;
-        penyebut *= A.penyebut;
-    }
-
-    public void bagi (Rasional A) {
-        pembilang *= A.penyebut;
-        penyebut *= A.pembilang;
-        Sederhana();
-    }
- 
-    public void cetak(){
-        System.out.println(pembilang + "/" + penyebut);
-    }
->>>>>>> 17c73b0ded14f6eeec4479b892a59bb387446624
- }
+}
