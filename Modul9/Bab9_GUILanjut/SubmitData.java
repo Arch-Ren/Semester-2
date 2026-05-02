@@ -2,10 +2,7 @@ package Modul9.Bab9_GUILanjut;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
 import javax.swing.*;
-import javax.swing.border.*;
-import java.util.*;
 
 public class SubmitData extends JFrame {
     JLabel nama = new JLabel("Nama Lengkap");
@@ -131,8 +128,8 @@ public class SubmitData extends JFrame {
 
         JLabel judul = new JLabel("Data Mahasiswa");
         judul.setFont(new Font("Arial", Font.BOLD, 14));
-        judul.setHorizontalAlignment(JLabel.CENTER); // ← tengah
-        judul.setBounds(0, 10, 320, 25); // ← lebar full frame
+        judul.setHorizontalAlignment(JLabel.CENTER); // judul di tengah
+        judul.setBounds(0, 10, 320, 25); // lebar full frame
         frameBaru.getContentPane().add(judul);
 
         // Padding string agar titik dua sejajar
