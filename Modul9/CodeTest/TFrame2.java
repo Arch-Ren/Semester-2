@@ -1,3 +1,5 @@
+package Modul9.CodeTest;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -7,7 +9,7 @@ public class TFrame2 extends Frame {
     CheckboxGroup cbg;
     Checkbox cbNilaiAngka, cbNilaiHuruf;
 
-    public TFrame2(){
+    public TFrame2() {
         setLayout(null);
 
         lbJudul = new Label("Hitung Nilai Akhir");
@@ -61,7 +63,7 @@ public class TFrame2 extends Frame {
 
         cbNilaiAngka = new Checkbox("Nilai Angka", cbg, false);
         this.add(cbNilaiAngka).setBounds(200, 220, 90, 20);
-        
+
         cbNilaiHuruf.addItemListener(new mainAction());
         cbNilaiAngka.addItemListener(new mainAction());
 
@@ -78,10 +80,10 @@ public class TFrame2 extends Frame {
             int kuis = Integer.parseInt(txtKuis.getText().trim());
             int UTS = Integer.parseInt(txtUTS.getText().trim());
             int UAS = Integer.parseInt(txtUAS.getText().trim());
-            String hasil = String.valueOf(tugas/4+kuis/4+UTS/4+UAS/4);
+            String hasil = String.valueOf(tugas / 4 + kuis / 4 + UTS / 4 + UAS / 4);
             Object source = e.getItemSelectable();
 
-            if (source == cbNilaiAngka){
+            if (source == cbNilaiAngka) {
                 txtHasil.setText(hasil);
             } else if (source == cbNilaiHuruf) {
                 txtHasil.setText("belum ada");

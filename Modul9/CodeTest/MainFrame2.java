@@ -1,3 +1,5 @@
+package Modul9.CodeTest;
+
 public class MainFrame2 {
     public static void main(String[] args) {
         TFrame2 window = new TFrame2();
