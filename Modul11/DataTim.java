@@ -28,7 +28,7 @@ public class DataTim {
         daftarPemain.add(new DataType("Tim B", 6, 175, 71));
         daftarPemain.add(new DataType("Tim B", 7, 172, 68));
         daftarPemain.add(new DataType("Tim B", 8, 171, 68));
-        daftarPemain.add(new DataType("Tim B", 9, 1768, 65));
+        daftarPemain.add(new DataType("Tim B", 9, 168, 65));
         daftarPemain.add(new DataType("Tim B", 10, 169, 60));
         
         return daftarPemain;
